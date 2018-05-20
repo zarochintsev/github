@@ -28,7 +28,10 @@ class RepositoriesServiceImpl {
 
 // MARK: - RepositoriesService
 extension RepositoriesServiceImpl: RepositoriesService {
-  func searchRepositories(with name: String, isNewSearch: Bool, completionHandler: @escaping RepositoriesService.SearchCompletion) {
+  func searchRepositories(
+    with name: String,
+    isNewSearch: Bool,
+    completionHandler: @escaping RepositoriesService.SearchCompletion) {
     if isNewSearch {
       page = 1
       searchedRepositories.removeAll()

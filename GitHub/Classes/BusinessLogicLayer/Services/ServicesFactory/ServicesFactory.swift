@@ -16,9 +16,7 @@ struct ServicesFactory {
   }
   
   static func makeRepositoriesService() -> RepositoriesService {
-    let networkManager = NetworkManagerImpl()
-    let repositoriesProvider = RepositoriesProviderImpl(
-      networkManager: networkManager)
+    let repositoriesProvider = ProvidersFactory.makeRepositoriesProvider()
     let coreDataManager = CoreDataManagerImpl.default
     
     let repositoriesService = RepositoriesServiceImpl(

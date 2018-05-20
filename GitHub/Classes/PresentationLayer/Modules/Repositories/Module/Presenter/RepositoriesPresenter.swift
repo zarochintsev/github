@@ -28,10 +28,6 @@ class RepositoriesPresenter {
   }
 }
 
-// MARK: - RepositoriesModuleInput
-extension RepositoriesPresenter: RepositoriesModuleInput {
-}
-
 // MARK: - RepositoriesViewOutput
 extension RepositoriesPresenter: RepositoriesViewOutput {
   func viewDidLoad() {

@@ -7,6 +7,5 @@
 //
 
 protocol LastSearchHistoryViewOutput: class {
-  func viewDidLoad()
   func didSelectRepositiry(name: String, stringUrl: String)
 }

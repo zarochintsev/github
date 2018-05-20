@@ -20,10 +20,6 @@ class RepositoryInfoPresenter {
   var stringUrl: String!
 }
 
-// MARK: - RepositoryInfoModuleInput
-extension RepositoryInfoPresenter: RepositoryInfoModuleInput {
-}
-
 // MARK: - RepositoryInfoViewOutput
 extension RepositoryInfoPresenter: RepositoryInfoViewOutput {
   func viewDidLoad() {

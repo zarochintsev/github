@@ -15,15 +15,8 @@ class LastSearchHistoryPresenter {
   var router: LastSearchHistoryRouterInput!
 }
 
-// MARK: - LastSearchHistoryModuleInput
-extension LastSearchHistoryPresenter: LastSearchHistoryModuleInput {
-}
-
 // MARK: - LastSearchHistoryViewOutput
-extension LastSearchHistoryPresenter: LastSearchHistoryViewOutput {
-  func viewDidLoad() {
-  }
-  
+extension LastSearchHistoryPresenter: LastSearchHistoryViewOutput {  
   func didSelectRepositiry(name: String, stringUrl: String) {
     router.presentRepositoryInfoModule(with: name, stringUrl: stringUrl)
   }

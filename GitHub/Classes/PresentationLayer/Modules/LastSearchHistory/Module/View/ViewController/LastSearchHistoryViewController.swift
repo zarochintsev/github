@@ -21,7 +21,6 @@ class LastSearchHistoryViewController: BaseViewController {
     super.viewDidLoad()
     navigationItemSetup()
     dataDisplayManagerSetup()
-    output.viewDidLoad()
   }
   
   // MARK: - Setup

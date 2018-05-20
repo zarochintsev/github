@@ -19,8 +19,8 @@ class RepositoryInfoViewController: UIViewController {
   @IBOutlet private weak var wrapperView: UIView!
   
   // MARK: - Private
-  private var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
   private var initialOrigin = CGPoint.zero
+  private var initialTouchPoint = CGPoint(x: 0, y: 0)
   
   // MARK: - Lifecycle
   override func viewDidLoad() {
@@ -30,7 +30,7 @@ class RepositoryInfoViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    UIView.animate(withDuration: C.showDuration) {
+    UIView.animate(withDuration: C.duration) {
       self.view.backgroundColor = C.backgroundColor
     }
   }
@@ -42,7 +42,7 @@ class RepositoryInfoViewController: UIViewController {
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    UIView.animate(withDuration: C.dismissDuration) {
+    UIView.animate(withDuration: C.duration) {
       self.view.backgroundColor = .clear
     }
   }
@@ -64,10 +64,10 @@ class RepositoryInfoViewController: UIViewController {
         wrapperView.frame.origin.y = initialOrigin.y + distance
       }
     case .ended, .cancelled:
-      if touchPoint.y - initialTouchPoint.y > 100 {
+      if touchPoint.y - initialTouchPoint.y > C.endTouchPoint {
         output.dismissButtonDidTap()
       } else {
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: C.duration, animations: {
           self.wrapperView.frame.origin = self.initialOrigin
         })
       }
@@ -92,7 +92,7 @@ extension RepositoryInfoViewController: RepositoryInfoViewInput {
 
 // MARK: Constants
 private enum C {
-  static let showDuration: TimeInterval = 0.5
-  static let dismissDuration: TimeInterval = 0.5
+  static let duration: TimeInterval = 0.5
   static let backgroundColor = UIColor(white: 26 / 255.0, alpha: 0.4)
+  static let endTouchPoint: CGFloat = 200.0
 }
