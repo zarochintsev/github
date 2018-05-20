@@ -45,7 +45,7 @@ extension RepositoriesServiceImpl: RepositoriesService {
         strongSelf.dispatchGroup.leave()
       }
       
-      DispatchQueue.main.sync {
+      DispatchQueue.main.async {
         let key = (task.currentRequest?.url?.absoluteString ?? "") as NSString
         strongSelf.tasks.setObject(task, forKey: key)
       }
@@ -62,7 +62,7 @@ extension RepositoriesServiceImpl: RepositoriesService {
         strongSelf.dispatchGroup.leave()
       }
       
-      DispatchQueue.main.sync {
+      DispatchQueue.main.async {
         let key = (task.currentRequest?.url?.absoluteString ?? "") as NSString
         strongSelf.tasks.setObject(task, forKey: key)
       }

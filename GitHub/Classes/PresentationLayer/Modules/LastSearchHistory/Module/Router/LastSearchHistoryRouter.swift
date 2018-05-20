@@ -17,6 +17,7 @@ extension LastSearchHistoryRouter: LastSearchHistoryRouterInput {
   func presentRepositoryInfoModule(with name: String, stringUrl: String) {
     let viewController = RepositoryInfoFactory.make(name: name, stringUrl: stringUrl)
     viewController.modalPresentationStyle = .custom
+    viewController.modalTransitionStyle = .crossDissolve
     view?.present(view: viewController, animated: true, completion: nil)
   }
 }

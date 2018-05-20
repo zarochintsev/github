@@ -30,7 +30,6 @@ extension RepositoryInfoPresenter: RepositoryInfoViewOutput {
     if let name = name, let stringUrl = stringUrl {
       view?.configure(with: name, stringUrl: stringUrl)
     }
-    
   }
   
   func dismissButtonDidTap() {

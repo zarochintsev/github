@@ -58,6 +58,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wpo-5Y-k4P" appends="YES" id="GTo-eA-bak"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,9 +75,15 @@
                     <connections>
                         <outlet property="navigationBar" destination="a8x-nu-zc5" id="scx-zm-IQb"/>
                         <outlet property="webView" destination="Ceb-UI-DdB" id="sbq-zS-AtT"/>
+                        <outlet property="wrapperView" destination="YMW-xs-U74" id="gtc-xF-zQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KU-LR-3jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Wpo-5Y-k4P">
+                    <connections>
+                        <action selector="panGestureRecognizerHandler:" destination="qvl-Rl-Uo1" id="cDy-Y2-yEW"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-32" y="-45"/>
         </scene>
