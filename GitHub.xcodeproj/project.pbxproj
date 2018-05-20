@@ -70,6 +70,8 @@
 		BA5FCC5220B044ED001679A0 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC5120B044ED001679A0 /* RepositoriesService.swift */; };
 		BA5FCC5420B044F2001679A0 /* RepositoriesServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC5320B044F2001679A0 /* RepositoriesServiceImpl.swift */; };
 		BA5FCC5720B04553001679A0 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC5620B04553001679A0 /* TransitionHandler.swift */; };
+		BA737D5720B214BB00986E7C /* String+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA737D5620B214BB00986E7C /* String+Formatter.swift */; };
+		BA737D5D20B219FD00986E7C /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA737D5C20B219FD00986E7C /* NSObject+ClassName.swift */; };
 		BA9080F220B16BCC00473C9F /* String+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080F120B16BCC00473C9F /* String+Formatter.swift */; };
 		BA9080F520B16DEB00473C9F /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080F420B16DEB00473C9F /* ServicesFactory.swift */; };
 		BA9080FE20B1876400473C9F /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080FD20B1876400473C9F /* AuthorizationService.swift */; };
@@ -191,6 +193,8 @@
 		BA5FCC5120B044ED001679A0 /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
 		BA5FCC5320B044F2001679A0 /* RepositoriesServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceImpl.swift; sourceTree = "<group>"; };
 		BA5FCC5620B04553001679A0 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
+		BA737D5620B214BB00986E7C /* String+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatter.swift"; sourceTree = "<group>"; };
+		BA737D5C20B219FD00986E7C /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		BA9080F120B16BCC00473C9F /* String+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatter.swift"; sourceTree = "<group>"; };
 		BA9080F420B16DEB00473C9F /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
 		BA9080FD20B1876400473C9F /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
@@ -830,6 +834,7 @@
 			children = (
 				BA5FCC1D20B03877001679A0 /* Info.plist */,
 				9CE2AFB21557F3165ED2BBCB /* PresentationLayer */,
+				BA737D5420B2149F00986E7C /* Extensions */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -990,6 +995,31 @@
 				BA05530E20B047B9000F8078 /* NetworkManagerImpl.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		BA737D5420B2149F00986E7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA737D5B20B219F400986E7C /* NSObject+ClassName */,
+				BA737D5520B214A800986E7C /* String+Formatter */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA737D5520B214A800986E7C /* String+Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				BA737D5620B214BB00986E7C /* String+Formatter.swift */,
+			);
+			path = "String+Formatter";
+			sourceTree = "<group>";
+		};
+		BA737D5B20B219F400986E7C /* NSObject+ClassName */ = {
+			isa = PBXGroup;
+			children = (
+				BA737D5C20B219FD00986E7C /* NSObject+ClassName.swift */,
+			);
+			path = "NSObject+ClassName";
 			sourceTree = "<group>";
 		};
 		BA9080F020B16BAB00473C9F /* String+Formatter */ = {
@@ -1323,11 +1353,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CC5A470C73FE87E3E1E8F3 /* RepositoriesAssemblyTests.swift in Sources */,
+				BA737D5720B214BB00986E7C /* String+Formatter.swift in Sources */,
 				1ABE19335A4A3447CA6FDBBD /* RepositoriesInteractorTests.swift in Sources */,
 				BD875072BF86AF18FE2EDADE /* RepositoriesPresenterTests.swift in Sources */,
 				B0A8F2E639F5D60366422A3A /* RepositoriesRouterTests.swift in Sources */,
 				99676881D63708A63C03A327 /* RepositoriesViewTests.swift in Sources */,
 				984E6CAF9FB481C711550CA9 /* RepositoriesDataDisplayManager.swift in Sources */,
+				BA737D5D20B219FD00986E7C /* NSObject+ClassName.swift in Sources */,
 				AF33EC5BDDD29AD26364FEEE /* LastSearchHistoryAssemblyTests.swift in Sources */,
 				7C7D28683ECA82BCFDB70104 /* LastSearchHistoryInteractorTests.swift in Sources */,
 				D90EA8E7DA848B617D6D90E9 /* LastSearchHistoryPresenterTests.swift in Sources */,
