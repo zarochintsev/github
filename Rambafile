@@ -25,13 +25,10 @@ test_file_path: Tests/PresentationLayer/Modules
 # The Xcode group path to new tests
 test_group_path: Tests/PresentationLayer/Modules
 
-### Dependencies settings section
-# podfile_path: Podfile
-cartfile_path: Cartfile
-
 ### Templates
 catalogs:
 - 'https://github.com/zarochintsev/GenerambaTemplates'
 templates:
+- {name: swift-viper}
 - {name: swift-swinject-viper}
 - {name: swift-swinject-viper-ddm}
