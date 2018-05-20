@@ -20,12 +20,12 @@ private extension {{ prefix }}{{ module_info.name }}Factory {
   static func make{{ prefix }}{{ module_info.name }}ViewController() -> UIViewController {
     let viewController = {{ prefix }}{{ module_info.name }}ViewController()
 
-    let router = RepositoriesRouter()
+    let router = {{ prefix }}{{ module_info.name }}Router()
     router.view = viewController
 
-    let interactor = RepositoriesInteractor()
+    let interactor = {{ prefix }}{{ module_info.name }}Interactor()
 
-    let presenter = RepositoriesPresenter()
+    let presenter = {{ prefix }}{{ module_info.name }}Presenter()
     presenter.router = router
     presenter.view = viewController
     presenter.interactor = interactor
