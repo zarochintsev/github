@@ -11,6 +11,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder {
   var window: UIWindow?
+  lazy var authorizationService = ServicesFactory.makeAuthorizationService()
+  lazy var coreDataManager: CoreDataManager = CoreDataManagerImpl.default
 }
 
 // MARK: - UIApplicationDelegate
@@ -20,6 +22,14 @@ extension AppDelegate: UIApplicationDelegate {
     window?.rootViewController = CleanLaunchRouter.make()
     window?.makeKeyAndVisible()
     return true
+  }
+  
+  func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+    return authorizationService.application(application, handleOpen: url)
+  }
+  
+  func applicationWillTerminate(_ application: UIApplication) {
+    coreDataManager.saveContext()
   }
   
 }

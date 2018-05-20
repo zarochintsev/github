@@ -16,15 +16,14 @@ struct LS {
     struct SearchController {
       static let placeholder = "Repositories.SearchController.Placeholder"
     }
+    struct Button {
+      static let signIn = "Repositories.Button.SignIn"
+      static let signOut = "Repositories.Button.SignOut"
+    }
   }
   
   // MARK: - LastSearchHistory module
   struct LastSearchHistory {
     static let title = "LastSearchHistory.NavigationItem.Title"
-  }
-  
-  // MARK: - View Elements
-  struct RepositoryTableViewCell {
-    
   }
 }

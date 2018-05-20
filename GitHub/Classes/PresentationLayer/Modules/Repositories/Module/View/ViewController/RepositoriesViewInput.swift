@@ -8,4 +8,5 @@
 
 protocol RepositoriesViewInput: class {
   func update(repositories: [Repository])
+  func updateSignInButton(isAuthorize: Bool)
 }

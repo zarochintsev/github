@@ -14,6 +14,7 @@ class RepositoriesViewController: BaseViewController {
   var dataDisplayManager: RepositoriesDataDisplayManager!
   
   private let searchController = UISearchController(searchResultsController: nil)
+  private var signInButton: UIBarButtonItem!
   
   // MARK: - Outlets
   @IBOutlet private weak var tableView: UITableView!
@@ -32,6 +33,13 @@ class RepositoriesViewController: BaseViewController {
   // MARK: - Setup
   func navigationItemSetup() {
     title = LS.Repositories.title.localized()
+    signInButton = UIBarButtonItem(
+      title: nil,
+      style: .plain,
+      target: self,
+      action: #selector(signInButtonDidTap))
+    navigationItem.leftBarButtonItem = signInButton
+    
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .bookmarks,
       target: self,
@@ -58,12 +66,22 @@ class RepositoriesViewController: BaseViewController {
     output.bookmarksButtonDidTap()
   }
   
+  @objc func signInButtonDidTap() {
+    output.signInButtonDidTap()
+  }
 }
 
 // MARK: - RepositoriesViewInput
 extension RepositoriesViewController: RepositoriesViewInput {
   func update(repositories: [Repository]) {
     dataDisplayManager.update(repositories: repositories)
+  }
+  
+  func updateSignInButton(isAuthorize: Bool) {
+    signInButton.title = isAuthorize
+      ? LS.Repositories.Button.signOut.localized()
+      : LS.Repositories.Button.signIn.localized()
+    searchController.searchBar.isUserInteractionEnabled = isAuthorize
   }
 }
 

@@ -16,4 +16,5 @@ protocol RepositoriesViewOutput: class {
   func needLoadNewPieces()
   
   func bookmarksButtonDidTap()
+  func signInButtonDidTap()
 }

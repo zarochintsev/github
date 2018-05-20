@@ -78,6 +78,9 @@
 		BA5FCC5720B04553001679A0 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC5620B04553001679A0 /* TransitionHandler.swift */; };
 		BA9080F220B16BCC00473C9F /* String+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080F120B16BCC00473C9F /* String+Formatter.swift */; };
 		BA9080F520B16DEB00473C9F /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080F420B16DEB00473C9F /* ServicesFactory.swift */; };
+		BA9080FE20B1876400473C9F /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080FD20B1876400473C9F /* AuthorizationService.swift */; };
+		BA90810020B1876B00473C9F /* AuthorizationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080FF20B1876B00473C9F /* AuthorizationServiceImpl.swift */; };
+		BA90810320B1955000473C9F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90810220B1955000473C9F /* Notification+Name.swift */; };
 		BD1890414C539FC9DDC84B2B /* RepositoryInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA3724394833B794302EE10 /* RepositoryInfoModuleInput.swift */; };
 		BD875072BF86AF18FE2EDADE /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF708E4A8330A8ED878E3 /* RepositoriesPresenterTests.swift */; };
 		BD88A1CEC03F44FC736E9C71 /* RepositoryInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F615DE5C9053B2AF4DC244 /* RepositoryInfoRouterInput.swift */; };
@@ -204,6 +207,9 @@
 		BA5FCC5620B04553001679A0 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
 		BA9080F120B16BCC00473C9F /* String+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Formatter.swift"; sourceTree = "<group>"; };
 		BA9080F420B16DEB00473C9F /* ServicesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
+		BA9080FD20B1876400473C9F /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		BA9080FF20B1876B00473C9F /* AuthorizationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationServiceImpl.swift; sourceTree = "<group>"; };
+		BA90810220B1955000473C9F /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		C0E4E7F8AB61C377F81F5972 /* LastSearchHistoryRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryRouter.swift; sourceTree = "<group>"; };
 		C7BEF708E4A8330A8ED878E3 /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
 		CA40AB7B35F8618F6CE5C65A /* RepositoriesRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesRouterInput.swift; sourceTree = "<group>"; };
@@ -799,6 +805,7 @@
 		BA5FCC0C20B036F5001679A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BA90810120B1954600473C9F /* Notification+Name */,
 				BA9080F020B16BAB00473C9F /* String+Formatter */,
 				BA5FCC3D20B03FDF001679A0 /* String+Localization */,
 				BA5FCC2E20B03CCA001679A0 /* NSObject+ClassName */,
@@ -855,6 +862,7 @@
 		BA5FCC2320B03973001679A0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BA9080FC20B1875A00473C9F /* AuthorizationService */,
 				BA9080F320B16DE100473C9F /* ServicesFactory */,
 				BA5FCC5020B044E7001679A0 /* RepositoriesService */,
 			);
@@ -1023,6 +1031,23 @@
 				BA9080F420B16DEB00473C9F /* ServicesFactory.swift */,
 			);
 			path = ServicesFactory;
+			sourceTree = "<group>";
+		};
+		BA9080FC20B1875A00473C9F /* AuthorizationService */ = {
+			isa = PBXGroup;
+			children = (
+				BA9080FD20B1876400473C9F /* AuthorizationService.swift */,
+				BA9080FF20B1876B00473C9F /* AuthorizationServiceImpl.swift */,
+			);
+			path = AuthorizationService;
+			sourceTree = "<group>";
+		};
+		BA90810120B1954600473C9F /* Notification+Name */ = {
+			isa = PBXGroup;
+			children = (
+				BA90810220B1955000473C9F /* Notification+Name.swift */,
+			);
+			path = "Notification+Name";
 			sourceTree = "<group>";
 		};
 		BB4FEF5AFAB7F34BB0C1E291 /* Repositories */ = {
@@ -1288,6 +1313,7 @@
 				00B6AF2B39A3CFBB59DEDFB4 /* RepositoriesDataDisplayManagerImpl.swift in Sources */,
 				BA9080F220B16BCC00473C9F /* String+Formatter.swift in Sources */,
 				BA5FCC5220B044ED001679A0 /* RepositoriesService.swift in Sources */,
+				BA90810020B1876B00473C9F /* AuthorizationServiceImpl.swift in Sources */,
 				BA05531F20B056D8000F8078 /* Repository.swift in Sources */,
 				BA05530D20B047B3000F8078 /* NetworkManager.swift in Sources */,
 				BA5FCC4D20B04267001679A0 /* RepositoryTableViewCell.swift in Sources */,
@@ -1318,7 +1344,9 @@
 				E27DD961BBA9AFB4FF7E28ED /* RepositoryInfoRouter.swift in Sources */,
 				13ECD1C43152AAF90BA241B2 /* RepositoryInfoViewInput.swift in Sources */,
 				1FFE9C26821EB3B685BF6499 /* RepositoryInfoViewOutput.swift in Sources */,
+				BA9080FE20B1876400473C9F /* AuthorizationService.swift in Sources */,
 				B824FE50904E37C10F81099F /* RepositoryInfoViewController.swift in Sources */,
+				BA90810320B1955000473C9F /* Notification+Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

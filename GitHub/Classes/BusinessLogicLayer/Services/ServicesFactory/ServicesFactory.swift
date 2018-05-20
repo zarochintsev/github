@@ -11,6 +11,10 @@ import Foundation
 struct ServicesFactory {
   private init() {}
   
+  static func makeAuthorizationService() -> AuthorizationService {
+    return AuthorizationServiceImpl.default
+  }
+  
   static func makeRepositoriesService() -> RepositoriesService {
     let networkManager = NetworkManagerImpl()
     let repositoriesProvider = RepositoriesProviderImpl(
@@ -23,4 +27,5 @@ struct ServicesFactory {
     
     return repositoriesService
   }
+  
 }

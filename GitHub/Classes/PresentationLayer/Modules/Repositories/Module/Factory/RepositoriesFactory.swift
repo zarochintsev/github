@@ -26,6 +26,7 @@ private extension RepositoriesFactory {
     router.view = viewController
     
     let interactor = RepositoriesInteractor()
+    interactor.authorizationService = ServicesFactory.makeAuthorizationService()
     interactor.repositoriesService = ServicesFactory.makeRepositoriesService()
     
     let presenter = RepositoriesPresenter()

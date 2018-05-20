@@ -10,6 +10,7 @@ class RepositoriesInteractor {
   /// Reference to the Presenter's output interface.
   weak var output: RepositoriesInteractorOutput?
   
+  var authorizationService: AuthorizationService!
   var repositoriesService: RepositoriesService!
 }
 
@@ -22,5 +23,18 @@ extension RepositoriesInteractor: RepositoriesInteractorInput {
   }
   
   func cancelAllRequests() {
+  }
+  
+  var isAuthorize: Bool {
+    return authorizationService.isAuthorization
+  }
+  
+  func signIn() {
+    authorizationService.signIn()
+  }
+  
+  func signOut() {
+    authorizationService.signOut()
+    output?.obtainRepositories(repositories: [])
   }
 }

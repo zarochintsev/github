@@ -6,6 +6,8 @@
 //  Copyright © 2018 Alex Zarochintsev. All rights reserved.
 //
 
+import Foundation
+
 class RepositoriesPresenter {
   /// Reference to the View's interface.
   weak var view: RepositoriesViewInput?
@@ -15,6 +17,10 @@ class RepositoriesPresenter {
   var router: RepositoriesRouterInput!
   
   private var lastSearchText: String = ""
+  
+  @objc func didChangeAuthState() {
+    view?.updateSignInButton(isAuthorize: interactor.isAuthorize)
+  }
 }
 
 // MARK: - RepositoriesModuleInput
@@ -23,7 +29,15 @@ extension RepositoriesPresenter: RepositoriesModuleInput {
 
 // MARK: - RepositoriesViewOutput
 extension RepositoriesPresenter: RepositoriesViewOutput {
-  func viewDidLoad() {}
+  func viewDidLoad() {
+    view?.updateSignInButton(isAuthorize: interactor.isAuthorize)
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(didChangeAuthState),
+      name: .DidChangeAuthorizationState,
+      object: nil)
+  }
+  
   func searchBarTextDidChange(searchText: String) {
     if !searchText.isEmpty {
       lastSearchText = searchText
@@ -33,6 +47,10 @@ extension RepositoriesPresenter: RepositoriesViewOutput {
   
   func searchBarCancelButtonClicked() {
     interactor.cancelAllRequests()
+  }
+  
+  func signInButtonDidTap() {
+    interactor.isAuthorize ? interactor.signOut() : interactor.signIn()
   }
   
   func bookmarksButtonDidTap() {

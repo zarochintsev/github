@@ -11,4 +11,8 @@ import Foundation
 protocol RepositoriesInteractorInput: class {
   func searchRepositories(with name: String, isNewSearch: Bool)
   func cancelAllRequests()
+  
+  var isAuthorize: Bool { get }
+  func signIn()
+  func signOut()
 }
