@@ -1,0 +1,54 @@
+# Template information section
+name: "swift-swinject-viper"
+summary: "Viper module with use dependency injection frameworks, Swinject and SwinjectStoryboard"
+author: "Alex Zarochintsev"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Assembly
+- {name: Module/Assembly/Assembly.swift, path: Code/Assembly/assembly.swift.liquid}
+
+# Interactor layer
+- {name: Module/Interactor/InteractorInput.swift, path: Code/Interactor/interactor_input.swift.liquid}
+- {name: Module/Interactor/InteractorOutput.swift, path: Code/Interactor/interactor_output.swift.liquid}
+- {name: Module/Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Presenter layer
+- {name: Module/Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
+- {name: Module/Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Router layer
+- {name: Module/Router/RouterInput.swift, path: Code/Router/router_input.swift.liquid}
+- {name: Module/Router/Router.swift, path: Code/Router/router.swift.liquid}
+
+# View layer
+- {name: Module/View/ViewController/ViewInput.swift,  path: Code/View/ViewController/view_input.swift.liquid}
+- {name: Module/View/ViewController/ViewOutput.swift, path: Code/View/ViewController/view_output.swift.liquid}
+- {name: Module/View/ViewController/ViewController.swift, path: Code/View/ViewController/viewcontroller.swift.liquid}
+
+# The declarations for test files
+test_files:
+
+# Assembly tests
+- {name: Assembly/AssemblyTests.swift, path: Tests/Assembly/assembly_tests.swift.liquid}
+
+# Interactor tests
+- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+
+# Presenter tests
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+
+# Router tests
+- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
+
+# View tests
+- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+
+# Template dependencies
+dependencies:
+- Swinject
+- SwinjectStoryboard
+- LightRoute

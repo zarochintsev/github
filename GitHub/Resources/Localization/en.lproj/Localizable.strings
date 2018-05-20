@@ -1,0 +1,16 @@
+//
+//  Localizable.strings
+//  GitHub
+//
+//  Created by Alex Zarochintsev on 5/19/18.
+//  Copyright © 2018 Alex Zarochintsev. All rights reserved.
+//
+
+// MARK: - Repositories Module
+"Repositories.NavigationItem.Title" = "Repositories";
+"Repositories.SearchController.Placeholder" = "Search for repositories";
+"Repositories.Button.SignIn" = "Sign In";
+"Repositories.Button.SignOut" = " Sign Out";
+
+// MARK: - LastSearchHistory Module
+"LastSearchHistory.NavigationItem.Title" = "Last search history";

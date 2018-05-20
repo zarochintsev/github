@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository Info View Controller-->
+        <scene sceneID="MvL-gY-AnD">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryInfoViewController" id="qvl-Rl-Uo1" customClass="RepositoryInfoViewController" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="geu-9g-Cfb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMW-xs-U74">
+                                <rect key="frame" x="20" y="64" width="280" height="372"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-nu-zc5">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <items>
+                                            <navigationItem title="Title" id="CtY-0p-NiI">
+                                                <barButtonItem key="leftBarButtonItem" systemItem="stop" id="R9I-KT-hlL">
+                                                    <connections>
+                                                        <action selector="dismissButtonDidTap:" destination="qvl-Rl-Uo1" id="Qdu-xB-XKL"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-UI-DdB">
+                                        <rect key="frame" x="0.0" y="44" width="280" height="328"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="a8x-nu-zc5" firstAttribute="leading" secondItem="YMW-xs-U74" secondAttribute="leading" id="9eJ-L4-rfl"/>
+                                    <constraint firstItem="a8x-nu-zc5" firstAttribute="top" secondItem="YMW-xs-U74" secondAttribute="top" id="Hrp-TE-u7t"/>
+                                    <constraint firstItem="Ceb-UI-DdB" firstAttribute="top" secondItem="a8x-nu-zc5" secondAttribute="bottom" id="KPN-2P-khO"/>
+                                    <constraint firstAttribute="trailing" secondItem="a8x-nu-zc5" secondAttribute="trailing" id="jJ3-p7-7RH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ceb-UI-DdB" secondAttribute="trailing" id="nR1-6a-DH8"/>
+                                    <constraint firstItem="Ceb-UI-DdB" firstAttribute="leading" secondItem="YMW-xs-U74" secondAttribute="leading" id="vhL-dp-Mdu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ceb-UI-DdB" secondAttribute="bottom" id="wns-jS-QFq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wpo-5Y-k4P" appends="YES" id="GTo-eA-bak"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Av5-Yr-mh3" firstAttribute="bottom" secondItem="YMW-xs-U74" secondAttribute="bottom" constant="44" id="BPH-n0-9ES"/>
+                            <constraint firstItem="YMW-xs-U74" firstAttribute="top" secondItem="Av5-Yr-mh3" secondAttribute="top" constant="44" id="Tgt-Z2-5UE"/>
+                            <constraint firstItem="Av5-Yr-mh3" firstAttribute="trailing" secondItem="YMW-xs-U74" secondAttribute="trailing" constant="20" id="lCW-F1-ja5"/>
+                            <constraint firstItem="YMW-xs-U74" firstAttribute="leading" secondItem="Av5-Yr-mh3" secondAttribute="leading" constant="20" id="uBZ-Of-4dZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Av5-Yr-mh3"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="a8x-nu-zc5" id="scx-zm-IQb"/>
+                        <outlet property="webView" destination="Ceb-UI-DdB" id="sbq-zS-AtT"/>
+                        <outlet property="wrapperView" destination="YMW-xs-U74" id="gtc-xF-zQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2KU-LR-3jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Wpo-5Y-k4P">
+                    <connections>
+                        <action selector="panGestureRecognizerHandler:" destination="qvl-Rl-Uo1" id="cDy-Y2-yEW"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-32" y="-45"/>
+        </scene>
+    </scenes>
+</document>
