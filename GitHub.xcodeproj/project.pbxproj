@@ -55,8 +55,6 @@
 		BA05535420B08E72000F8078 /* RepositoryInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05535320B08E72000F8078 /* RepositoryInfoFactory.swift */; };
 		BA5FCBED20B03579001679A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCBEC20B03579001679A0 /* AppDelegate.swift */; };
 		BA5FCBF420B0357B001679A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5FCBF320B0357B001679A0 /* Assets.xcassets */; };
-		BA5FCC0620B036A7001679A0 /* ThirdPartiesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC0520B036A7001679A0 /* ThirdPartiesConfigurator.swift */; };
-		BA5FCC0820B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC0720B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift */; };
 		BA5FCC1420B0375A001679A0 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5FCC1320B0375A001679A0 /* Launch.storyboard */; };
 		BA5FCC2620B039E2001679A0 /* RepositoriesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC2520B039E2001679A0 /* RepositoriesFactory.swift */; };
 		BA5FCC2920B03B3D001679A0 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5FCC2820B03B3D001679A0 /* Repositories.storyboard */; };
@@ -180,8 +178,6 @@
 		BA5FCBEC20B03579001679A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA5FCBF320B0357B001679A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA5FCBF820B0357B001679A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA5FCC0520B036A7001679A0 /* ThirdPartiesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesConfigurator.swift; sourceTree = "<group>"; };
-		BA5FCC0720B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesConfiguratorImpl.swift; sourceTree = "<group>"; };
 		BA5FCC1320B0375A001679A0 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		BA5FCC1920B03877001679A0 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5FCC1D20B03877001679A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -736,7 +732,6 @@
 			isa = PBXGroup;
 			children = (
 				BA5FCC0320B03685001679A0 /* LaunchSystem */,
-				BA5FCC0420B03698001679A0 /* ThirdPartiesConfigurator */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -756,15 +751,6 @@
 				BA5FCC3120B03E15001679A0 /* Routers */,
 			);
 			path = LaunchSystem;
-			sourceTree = "<group>";
-		};
-		BA5FCC0420B03698001679A0 /* ThirdPartiesConfigurator */ = {
-			isa = PBXGroup;
-			children = (
-				BA5FCC0520B036A7001679A0 /* ThirdPartiesConfigurator.swift */,
-				BA5FCC0720B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift */,
-			);
-			path = ThirdPartiesConfigurator;
 			sourceTree = "<group>";
 		};
 		BA5FCC0920B036DC001679A0 /* BusinessLogicLayer */ = {
@@ -1264,9 +1250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5FCC0820B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift in Sources */,
 				BA5FCBED20B03579001679A0 /* AppDelegate.swift in Sources */,
-				BA5FCC0620B036A7001679A0 /* ThirdPartiesConfigurator.swift in Sources */,
 				E9B67CA4F77F3D5AF905DB76 /* RepositoriesInteractorInput.swift in Sources */,
 				BA5FCC3720B03EC2001679A0 /* BaseTableViewCell.swift in Sources */,
 				CAD979FD3B057D95241CD865 /* RepositoriesInteractorOutput.swift in Sources */,

@@ -83,6 +83,18 @@ extension LastSearchHistoryDataDisplayManagerImpl: UITableViewDataSource {
     
     return cell
   }
+  
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    
+  }
 }
 
 // MARK: - UITableViewDelegate

@@ -27,10 +27,22 @@ class LastSearchHistoryViewController: BaseViewController {
   // MARK: - Setup
   func navigationItemSetup() {
     title = LS.LastSearchHistory.title.localized()
+    navigationItem.rightBarButtonItem = editButtonItem
   }
   
   func dataDisplayManagerSetup() {
     dataDisplayManager.configure(with: tableView)
+  }
+  
+  // MARK: - Actions
+  override func setEditing(_ editing: Bool, animated: Bool) {
+    super.setEditing(editing, animated: animated)
+    
+    if isEditing {
+      tableView.setEditing(false, animated: animated)
+    }
+    
+    tableView.setEditing(editing, animated: animated)
   }
 }
 
