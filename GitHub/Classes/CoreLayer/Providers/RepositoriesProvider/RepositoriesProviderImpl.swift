@@ -18,7 +18,10 @@ class RepositoriesProviderImpl {
 
 // MARK: - RepositoriesProvider
 extension RepositoriesProviderImpl: RepositoriesProvider {
-  func search(with searchText: String, page: Int, completionHandler: @escaping RepositoriesProvider.BaseCompletion) {
+  @discardableResult func search(
+    with searchText: String,
+    page: Int,
+    completionHandler: @escaping RepositoriesProvider.BaseCompletion) -> URLSessionDataTask {
     let url = "https://api.github.com/search/repositories"
     let parameters: [String : Any] = [
       C.Keys.SearchRequest.words : searchText,
@@ -26,8 +29,8 @@ extension RepositoriesProviderImpl: RepositoriesProvider {
       C.Keys.SearchRequest.sort : C.starsSort,
       C.Keys.SearchRequest.perPage : C.perPage]
     
-    networkManager.get(url: url, parameters: parameters, headers: nil) { (request, response, responseObject, error) in
-      completionHandler(responseObject, error)
+    return networkManager.get(url: url, parameters: parameters, headers: nil) { (data, response, error) in
+      completionHandler(data, error)
     }
   }
 }

@@ -9,5 +9,8 @@
 import Foundation
 
 protocol RepositoriesProvider: BaseProvider {
-  func search(with searchText: String, page: Int, completionHandler: @escaping RepositoriesProvider.BaseCompletion)
+  @discardableResult func search(
+    with searchText: String,
+    page: Int,
+    completionHandler: @escaping RepositoriesProvider.BaseCompletion) -> URLSessionDataTask
 }

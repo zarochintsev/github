@@ -12,4 +12,5 @@ protocol RepositoriesService {
   typealias SearchCompletion = ([Repository], Error?) -> Void
   
   func searchRepositories(with name: String, isNewSearch: Bool, completionHandler: @escaping RepositoriesService.SearchCompletion)
+  func cancelAllRequests()
 }

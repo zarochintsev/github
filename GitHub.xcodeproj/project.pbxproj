@@ -43,8 +43,6 @@
 		B824FE50904E37C10F81099F /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B89F7F04B1323AE0FDE364 /* RepositoryInfoViewController.swift */; };
 		BA05530D20B047B3000F8078 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05530C20B047B3000F8078 /* NetworkManager.swift */; };
 		BA05530F20B047B9000F8078 /* NetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05530E20B047B9000F8078 /* NetworkManagerImpl.swift */; };
-		BA05531120B0482D000F8078 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA05531020B0482D000F8078 /* Alamofire.framework */; };
-		BA05531220B0482D000F8078 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA05531020B0482D000F8078 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA05531620B048A3000F8078 /* RepositoriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05531520B048A3000F8078 /* RepositoriesProvider.swift */; };
 		BA05531820B048A9000F8078 /* RepositoriesProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05531720B048A9000F8078 /* RepositoriesProviderImpl.swift */; };
 		BA05531C20B0493F000F8078 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05531B20B0493F000F8078 /* BaseProvider.swift */; };
@@ -60,7 +58,6 @@
 		BA5FCC0620B036A7001679A0 /* ThirdPartiesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC0520B036A7001679A0 /* ThirdPartiesConfigurator.swift */; };
 		BA5FCC0820B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC0720B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift */; };
 		BA5FCC1420B0375A001679A0 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5FCC1320B0375A001679A0 /* Launch.storyboard */; };
-		BA5FCC1C20B03877001679A0 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC1B20B03877001679A0 /* Tests.swift */; };
 		BA5FCC2620B039E2001679A0 /* RepositoriesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC2520B039E2001679A0 /* RepositoriesFactory.swift */; };
 		BA5FCC2920B03B3D001679A0 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5FCC2820B03B3D001679A0 /* Repositories.storyboard */; };
 		BA5FCC2D20B03B7B001679A0 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC2C20B03B7B001679A0 /* StoryboardFactory.swift */; };
@@ -81,6 +78,7 @@
 		BA9080FE20B1876400473C9F /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080FD20B1876400473C9F /* AuthorizationService.swift */; };
 		BA90810020B1876B00473C9F /* AuthorizationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9080FF20B1876B00473C9F /* AuthorizationServiceImpl.swift */; };
 		BA90810320B1955000473C9F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90810220B1955000473C9F /* Notification+Name.swift */; };
+		BA90810620B19BCE00473C9F /* RepositorySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90810520B19BCE00473C9F /* RepositorySearch.swift */; };
 		BD1890414C539FC9DDC84B2B /* RepositoryInfoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA3724394833B794302EE10 /* RepositoryInfoModuleInput.swift */; };
 		BD875072BF86AF18FE2EDADE /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF708E4A8330A8ED878E3 /* RepositoriesPresenterTests.swift */; };
 		BD88A1CEC03F44FC736E9C71 /* RepositoryInfoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F615DE5C9053B2AF4DC244 /* RepositoryInfoRouterInput.swift */; };
@@ -119,7 +117,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BA05531220B0482D000F8078 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +166,6 @@
 		B80E096F9825F4825364737D /* LastSearchHistoryDataDisplayManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryDataDisplayManager.swift; sourceTree = "<group>"; };
 		BA05530C20B047B3000F8078 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BA05530E20B047B9000F8078 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
-		BA05531020B0482D000F8078 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BA05531520B048A3000F8078 /* RepositoriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesProvider.swift; sourceTree = "<group>"; };
 		BA05531720B048A9000F8078 /* RepositoriesProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesProviderImpl.swift; sourceTree = "<group>"; };
 		BA05531B20B0493F000F8078 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
@@ -188,7 +184,6 @@
 		BA5FCC0720B036AD001679A0 /* ThirdPartiesConfiguratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesConfiguratorImpl.swift; sourceTree = "<group>"; };
 		BA5FCC1320B0375A001679A0 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		BA5FCC1920B03877001679A0 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA5FCC1B20B03877001679A0 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BA5FCC1D20B03877001679A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5FCC2520B039E2001679A0 /* RepositoriesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesFactory.swift; sourceTree = "<group>"; };
 		BA5FCC2820B03B3D001679A0 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
@@ -210,6 +205,7 @@
 		BA9080FD20B1876400473C9F /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		BA9080FF20B1876B00473C9F /* AuthorizationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationServiceImpl.swift; sourceTree = "<group>"; };
 		BA90810220B1955000473C9F /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		BA90810520B19BCE00473C9F /* RepositorySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearch.swift; sourceTree = "<group>"; };
 		C0E4E7F8AB61C377F81F5972 /* LastSearchHistoryRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryRouter.swift; sourceTree = "<group>"; };
 		C7BEF708E4A8330A8ED878E3 /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
 		CA40AB7B35F8618F6CE5C65A /* RepositoriesRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesRouterInput.swift; sourceTree = "<group>"; };
@@ -230,7 +226,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA05531120B0482D000F8078 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +603,7 @@
 		BA05531D20B056B8000F8078 /* PlainObjects */ = {
 			isa = PBXGroup;
 			children = (
+				BA90810420B19BC200473C9F /* RepositorySearch */,
 				BA05534120B06474000F8078 /* Repository */,
 			);
 			path = PlainObjects;
@@ -680,7 +676,6 @@
 		BA5FCBE020B03579001679A0 = {
 			isa = PBXGroup;
 			children = (
-				BA05531020B0482D000F8078 /* Alamofire.framework */,
 				BA5FCBEB20B03579001679A0 /* GitHub */,
 				BA5FCC1A20B03877001679A0 /* Tests */,
 				BA5FCBEA20B03579001679A0 /* Products */,
@@ -852,7 +847,6 @@
 		BA5FCC1A20B03877001679A0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BA5FCC1B20B03877001679A0 /* Tests.swift */,
 				BA5FCC1D20B03877001679A0 /* Info.plist */,
 				9CE2AFB21557F3165ED2BBCB /* PresentationLayer */,
 			);
@@ -1050,6 +1044,14 @@
 			path = "Notification+Name";
 			sourceTree = "<group>";
 		};
+		BA90810420B19BC200473C9F /* RepositorySearch */ = {
+			isa = PBXGroup;
+			children = (
+				BA90810520B19BCE00473C9F /* RepositorySearch.swift */,
+			);
+			path = RepositorySearch;
+			sourceTree = "<group>";
+		};
 		BB4FEF5AFAB7F34BB0C1E291 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -1165,7 +1167,6 @@
 				BA5FCBE620B03579001679A0 /* Frameworks */,
 				BA5FCBE720B03579001679A0 /* Resources */,
 				BA5FCC5C20B046F5001679A0 /* Embed Frameworks */,
-				BA5FCC5D20B0470C001679A0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1258,24 +1259,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BA5FCC5D20B0470C001679A0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		BA5FCBE520B03579001679A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1328,6 +1311,7 @@
 				3A074A4B02C0B613A3C779BB /* LastSearchHistoryPresenter.swift in Sources */,
 				ACCE111DD9556EF69F45ED76 /* LastSearchHistoryRouterInput.swift in Sources */,
 				EFA77B3A0CA4DB4852EA8631 /* LastSearchHistoryRouter.swift in Sources */,
+				BA90810620B19BCE00473C9F /* RepositorySearch.swift in Sources */,
 				26E5E45F1D91CF7E6728449A /* LastSearchHistoryViewInput.swift in Sources */,
 				6ED8C574B67D38F5D0422A10 /* LastSearchHistoryViewOutput.swift in Sources */,
 				BA05534E20B08A17000F8078 /* BaseViewController.swift in Sources */,
@@ -1354,7 +1338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5FCC1C20B03877001679A0 /* Tests.swift in Sources */,
 				C5CC5A470C73FE87E3E1E8F3 /* RepositoriesAssemblyTests.swift in Sources */,
 				1ABE19335A4A3447CA6FDBBD /* RepositoriesInteractorTests.swift in Sources */,
 				BD875072BF86AF18FE2EDADE /* RepositoriesPresenterTests.swift in Sources */,
@@ -1516,10 +1499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7Y4KEU8VJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.github;
@@ -1535,10 +1515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7Y4KEU8VJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.github;

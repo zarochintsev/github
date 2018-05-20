@@ -23,6 +23,7 @@ extension RepositoriesInteractor: RepositoriesInteractorInput {
   }
   
   func cancelAllRequests() {
+    repositoriesService.cancelAllRequests()
   }
   
   var isAuthorize: Bool {

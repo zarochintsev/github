@@ -15,6 +15,7 @@ class RepositoriesViewController: BaseViewController {
   
   private let searchController = UISearchController(searchResultsController: nil)
   private var signInButton: UIBarButtonItem!
+  private var timer: Timer?
   
   // MARK: - Outlets
   @IBOutlet private weak var tableView: UITableView!
@@ -69,6 +70,11 @@ class RepositoriesViewController: BaseViewController {
   @objc func signInButtonDidTap() {
     output.signInButtonDidTap()
   }
+  
+  // MARK: Actions
+  @objc func timerFire() {
+    output.searchBarTextDidChange(searchText: searchController.searchBar.text ?? "")
+  }
 }
 
 // MARK: - RepositoriesViewInput
@@ -99,7 +105,14 @@ extension RepositoriesViewController: RepositoriesDataDisplayManagerOutput {
 // MARK: - UISearchResultsUpdating
 extension RepositoriesViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
-    output.searchBarTextDidChange(searchText: searchController.searchBar.text ?? "")
+    timer?.invalidate()
+    timer = nil
+    timer = Timer.scheduledTimer(
+      timeInterval: C.timerDelay,
+      target: self,
+      selector: #selector(timerFire),
+      userInfo: nil,
+      repeats: false)
   }
 }
 
@@ -108,4 +121,9 @@ extension RepositoriesViewController: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     output.searchBarCancelButtonClicked()
   }
+}
+
+// MARK: - Constants
+private enum C {
+  static let timerDelay = 0.8
 }

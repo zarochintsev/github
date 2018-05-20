@@ -23,6 +23,7 @@ class RepositoriesServiceImpl {
   
   private var page = 1
   private var searchedRepositories = [Repository]()
+  private var tasks = NSMapTable<NSString, URLSessionDataTask>(keyOptions: .strongMemory, valueOptions: .weakMemory)
 }
 
 // MARK: - RepositoriesService
@@ -36,39 +37,34 @@ extension RepositoriesServiceImpl: RepositoriesService {
     DispatchQueue.global().async(group: dispatchGroup) { [weak self] in
       guard let strongSelf = self else { return }
       strongSelf.dispatchGroup.enter()
-      strongSelf.provider.search(with: name, page: strongSelf.page) { (responseObject, error) in
-        guard let responseObject = responseObject as? [String : AnyObject],
-          let items = responseObject["items"] as? NSArray else { return }
-        
-        do {
-          let data = try JSONSerialization.data(withJSONObject: items, options: JSONSerialization.WritingOptions.prettyPrinted)
-          let repositories = try JSONDecoder().decode([Repository].self, from: data)
-          strongSelf.searchedRepositories.append(contentsOf: repositories)
-        }
-        catch {
+      let task = strongSelf.provider.search(with: name, page: strongSelf.page) { data, error in
+        if let data = data, let repositorySearch = try? JSONDecoder().decode(RepositorySearch.self, from: data) {
+          strongSelf.searchedRepositories.append(contentsOf: repositorySearch.repositories)
         }
         
         strongSelf.dispatchGroup.leave()
+      }
+      
+      DispatchQueue.main.sync {
+        let key = (task.currentRequest?.url?.absoluteString ?? "") as NSString
+        strongSelf.tasks.setObject(task, forKey: key)
       }
     }
     
     DispatchQueue.global().async(group: dispatchGroup) { [weak self] in
       guard let strongSelf = self else { return }
       strongSelf.dispatchGroup.enter()
-      
-      strongSelf.provider.search(with: name, page: strongSelf.page + 1) { (responseObject, error) in
-        guard let responseObject = responseObject as? [String : AnyObject],
-          let items = responseObject["items"] as? NSArray else { return }
-        
-        do {
-          let data = try JSONSerialization.data(withJSONObject: items, options: JSONSerialization.WritingOptions.prettyPrinted)
-          let repositories = try JSONDecoder().decode([Repository].self, from: data)
-          strongSelf.searchedRepositories.append(contentsOf: repositories)
-        }
-        catch {
+      let task =  strongSelf.provider.search(with: name, page: strongSelf.page + 1) { data, error in
+        if let data = data, let repositorySearch = try? JSONDecoder().decode(RepositorySearch.self, from: data) {
+          strongSelf.searchedRepositories.append(contentsOf: repositorySearch.repositories)
         }
         
         strongSelf.dispatchGroup.leave()
+      }
+      
+      DispatchQueue.main.sync {
+        let key = (task.currentRequest?.url?.absoluteString ?? "") as NSString
+        strongSelf.tasks.setObject(task, forKey: key)
       }
     }
     
@@ -77,6 +73,13 @@ extension RepositoriesServiceImpl: RepositoriesService {
       strongSelf.page += 2
       strongSelf.save(repositories: strongSelf.searchedRepositories)
       completionHandler(strongSelf.searchedRepositories.sorted(by: { $0.stars > $1.stars }), nil)
+    }
+  }
+  
+  func cancelAllRequests() {
+    tasks.objectEnumerator()?.forEach {
+      print("This is: \($0)")
+      ($0 as? URLSessionDataTask)?.cancel()
     }
   }
 }

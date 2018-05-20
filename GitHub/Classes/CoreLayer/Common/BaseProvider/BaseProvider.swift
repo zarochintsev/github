@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BaseProvider {
-  typealias BaseCompletion = (Any?, Error?) -> Void
+  typealias BaseCompletion = (Data?, Error?) -> Void
 }

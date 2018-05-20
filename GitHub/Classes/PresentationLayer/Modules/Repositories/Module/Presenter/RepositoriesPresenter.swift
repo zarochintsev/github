@@ -18,6 +18,11 @@ class RepositoriesPresenter {
   
   private var lastSearchText: String = ""
   
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  // MARK: - Actions
   @objc func didChangeAuthState() {
     view?.updateSignInButton(isAuthorize: interactor.isAuthorize)
   }

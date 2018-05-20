@@ -9,11 +9,11 @@
 import Foundation
 
 protocol NetworkManager {
-  typealias RequestCompletion = (URLRequest?, HTTPURLResponse?, Any?, Error?) -> Void
+  typealias RequestCompletion = (Data?, URLResponse?, Error?) -> Void
   
-  func get(
+  @discardableResult func get(
     url: String,
     parameters: [String : Any]?,
     headers: [String : String]?,
-    completionHandler: @escaping RequestCompletion)
+    completionHandler: @escaping RequestCompletion) -> URLSessionDataTask
 }
