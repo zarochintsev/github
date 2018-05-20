@@ -26,6 +26,7 @@ extension RepositoriesDataDisplayManagerImpl: RepositoriesDataDisplayManager {
       UINib(nibName: RepositoryTableViewCell.className, bundle: nil),
       forCellReuseIdentifier: RepositoryTableViewCell.className)
     
+    tableView.keyboardDismissMode = .onDrag
     tableView.dataSource = self
     tableView.delegate = self
     tableView.tableFooterView = UIView()
