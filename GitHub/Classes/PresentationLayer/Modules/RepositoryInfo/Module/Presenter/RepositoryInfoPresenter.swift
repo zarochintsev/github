@@ -16,16 +16,20 @@ class RepositoryInfoPresenter {
   /// Reference to the Router's interface.
   var router: RepositoryInfoRouterInput!
   
-  var name: String!
-  var stringUrl: String!
+  private var config: RepositoryInfoModuleConfig!
+}
+
+// MARK: - RepositoryInfoModule
+extension RepositoryInfoPresenter: RepositoryInfo {
+  func configure(config: RepositoryInfoModuleConfig) {
+    self.config = config
+  }
 }
 
 // MARK: - RepositoryInfoViewOutput
 extension RepositoryInfoPresenter: RepositoryInfoViewOutput {
   func viewDidLoad() {
-    if let name = name, let stringUrl = stringUrl {
-      view?.configure(with: name, stringUrl: stringUrl)
-    }
+    view?.configure(with: config.name, url: config.url)
   }
   
   func dismissButtonDidTap() {

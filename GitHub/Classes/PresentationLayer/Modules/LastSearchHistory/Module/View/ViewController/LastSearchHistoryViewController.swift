@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastSearchHistoryViewController: BaseViewController {
+class LastSearchHistoryViewController: UIViewController {
   /// Reference to the Presenter's output interface.
   var output: LastSearchHistoryViewOutput!
   var dataDisplayManager: LastSearchHistoryDataDisplayManager!

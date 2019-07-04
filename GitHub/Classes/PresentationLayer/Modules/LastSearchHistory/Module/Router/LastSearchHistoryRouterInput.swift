@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LastSearchHistoryRouterInput: class {
-  func presentRepositoryInfoModule(with name: String, stringUrl: String)
+  func presentRepositoryInfoModule(config: RepositoryInfoModuleConfig)
 }

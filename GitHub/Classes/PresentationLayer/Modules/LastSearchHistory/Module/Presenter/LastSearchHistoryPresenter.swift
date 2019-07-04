@@ -6,6 +6,8 @@
 //  Copyright © 2018 Alex Zarochintsev. All rights reserved.
 //
 
+import Foundation
+
 class LastSearchHistoryPresenter {
   /// Reference to the View's interface.
   weak var view: LastSearchHistoryViewInput?
@@ -18,7 +20,9 @@ class LastSearchHistoryPresenter {
 // MARK: - LastSearchHistoryViewOutput
 extension LastSearchHistoryPresenter: LastSearchHistoryViewOutput {  
   func didSelectRepositiry(name: String, stringUrl: String) {
-    router.presentRepositoryInfoModule(with: name, stringUrl: stringUrl)
+    if let url = URL(string: stringUrl) {
+      router.presentRepositoryInfoModule(config: .init(name: name, url: url))
+    }
   }
 }
 

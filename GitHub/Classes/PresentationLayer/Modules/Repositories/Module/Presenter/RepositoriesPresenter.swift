@@ -16,7 +16,8 @@ class RepositoriesPresenter {
   /// Reference to the Router's interface.
   var router: RepositoriesRouterInput!
   
-  private var lastSearchText: String = ""
+  private var config: RepositoriesModuleConfig!
+  private var lastSearchText = ""
   
   deinit {
     NotificationCenter.default.removeObserver(self)
@@ -25,6 +26,13 @@ class RepositoriesPresenter {
   // MARK: - Actions
   @objc func didChangeAuthState() {
     view?.updateSignInButton(isAuthorize: interactor.isAuthorize)
+  }
+}
+
+// MARK: - RepositoriesModule
+extension RepositoriesPresenter: RepositoriesModule {
+  func configure(config: RepositoriesModuleConfig) {
+    self.config = config
   }
 }
 
@@ -39,29 +47,27 @@ extension RepositoriesPresenter: RepositoriesViewOutput {
       object: nil)
   }
   
-  func searchBarTextDidChange(searchText: String) {
+  func didChangeSearchBarText(searchText: String) {
     if !searchText.isEmpty {
       lastSearchText = searchText
       interactor.searchRepositories(with: searchText, isNewSearch: true)
     }
   }
   
-  func searchBarCancelButtonClicked() {
+  func didTapCancelButtonOnSearchBar() {
     interactor.cancelAllRequests()
   }
   
-  func signInButtonDidTap() {
+  func didTapSignInButton() {
     interactor.isAuthorize ? interactor.signOut() : interactor.signIn()
   }
   
-  func bookmarksButtonDidTap() {
+  func didTapBookmarksButton() {
     router.showLastSearchHistoryModule()
   }
   
   func didSelectRepository(_ repository: Repository) {
-    router.presentRepositoryInfoModule(
-      with: repository.name,
-      stringUrl: repository.url.absoluteString)
+    router.presentRepositoryInfoModule(config: .init(name: repository.name, url: repository.url))
   }
   
   func needLoadNewPieces() {

@@ -81,7 +81,6 @@ extension RepositoriesServiceImpl: RepositoriesService {
   
   func cancelAllRequests() {
     tasks.objectEnumerator()?.forEach {
-      print("This is: \($0)")
       ($0 as? URLSessionDataTask)?.cancel()
     }
   }

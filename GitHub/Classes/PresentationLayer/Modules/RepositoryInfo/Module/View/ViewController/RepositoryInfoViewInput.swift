@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RepositoryInfoViewInput: class {
-  func configure(with name: String, stringUrl: String)
+  func configure(with name: String, url: URL)
 }

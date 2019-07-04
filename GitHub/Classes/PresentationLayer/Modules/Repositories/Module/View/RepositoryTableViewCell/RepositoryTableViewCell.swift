@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepositoryTableViewCell: BaseTableViewCell {
+class RepositoryTableViewCell: UITableViewCell {
   // MARK: - Outlets
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var subtitleLabel: UILabel!
