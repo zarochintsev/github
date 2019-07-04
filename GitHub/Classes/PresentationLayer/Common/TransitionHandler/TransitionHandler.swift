@@ -26,5 +26,4 @@ extension UIViewController: TransitionHandler {
   func close(animated: Bool, completion: (() -> Void)?) {
     dismiss(animated: true, completion: completion)
   }
-  
 }

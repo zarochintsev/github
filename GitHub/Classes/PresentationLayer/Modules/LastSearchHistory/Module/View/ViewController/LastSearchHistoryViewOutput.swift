@@ -6,6 +6,8 @@
 //  Copyright © 2018 Alex Zarochintsev. All rights reserved.
 //
 
+import Foundation
+
 protocol LastSearchHistoryViewOutput: class {
   func didSelectRepositiry(name: String, stringUrl: String)
 }

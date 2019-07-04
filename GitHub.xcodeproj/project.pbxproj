@@ -49,7 +49,6 @@
 		BA05534520B06668000F8078 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05534420B06668000F8078 /* CoreDataManager.swift */; };
 		BA05534820B08494000F8078 /* LastSearchHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05534720B08494000F8078 /* LastSearchHistory.storyboard */; };
 		BA05534B20B085DA000F8078 /* LastSearchHistoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05534A20B085DA000F8078 /* LastSearchHistoryFactory.swift */; };
-		BA05534E20B08A17000F8078 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05534D20B08A17000F8078 /* BaseViewController.swift */; };
 		BA05535120B08D59000F8078 /* RepositoryInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05535020B08D59000F8078 /* RepositoryInfo.storyboard */; };
 		BA05535420B08E72000F8078 /* RepositoryInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05535320B08E72000F8078 /* RepositoryInfoFactory.swift */; };
 		BA5FCBED20B03579001679A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCBEC20B03579001679A0 /* AppDelegate.swift */; };
@@ -60,7 +59,6 @@
 		BA5FCC2D20B03B7B001679A0 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC2C20B03B7B001679A0 /* StoryboardFactory.swift */; };
 		BA5FCC3020B03CD9001679A0 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC2F20B03CD9001679A0 /* NSObject+ClassName.swift */; };
 		BA5FCC3420B03E3E001679A0 /* CleanLaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC3320B03E3E001679A0 /* CleanLaunchRouter.swift */; };
-		BA5FCC3720B03EC2001679A0 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC3620B03EC2001679A0 /* BaseTableViewCell.swift */; };
 		BA5FCC3C20B03F29001679A0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC3A20B03F29001679A0 /* Model.xcdatamodeld */; };
 		BA5FCC3F20B03FF2001679A0 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC3E20B03FF2001679A0 /* String+Localization.swift */; };
 		BA5FCC4620B04067001679A0 /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5FCC4520B04067001679A0 /* LocalizationConstants.swift */; };
@@ -95,6 +93,12 @@
 		E9B67CA4F77F3D5AF905DB76 /* RepositoriesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779014F204A49BDF3D9F565D /* RepositoriesInteractorInput.swift */; };
 		EFA77B3A0CA4DB4852EA8631 /* LastSearchHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4E7F8AB61C377F81F5972 /* LastSearchHistoryRouter.swift */; };
 		F5E4D0A500A6F13BF098C6E3 /* RepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19B334A37AB164CE55A37F /* RepositoriesInteractor.swift */; };
+		FA9DD5A722CDF4A800A0A461 /* ModuleInputConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD5A622CDF4A800A0A461 /* ModuleInputConfigurator.swift */; };
+		FA9DD5AA22CDF55400A0A461 /* RepositoriesModuleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD5A922CDF55400A0A461 /* RepositoriesModuleConfig.swift */; };
+		FA9DD5AC22CDF5D700A0A461 /* RepositoriesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD5AB22CDF5D700A0A461 /* RepositoriesModule.swift */; };
+		FA9DD5AF22CDF68700A0A461 /* RepositoryInfoModuleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD5AE22CDF68700A0A461 /* RepositoryInfoModuleConfig.swift */; };
+		FA9DD5B122CDF69800A0A461 /* RepositoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9DD5B022CDF69800A0A461 /* RepositoryInfo.swift */; };
+		FA9DD5B422CDFA8400A0A461 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9DD5B322CDFA8400A0A461 /* WebKit.framework */; };
 		FF41F548960679B60F12DA5C /* RepositoriesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DBD14B68B99C5A00F03CB /* RepositoriesViewInput.swift */; };
 /* End PBXBuildFile section */
 
@@ -168,7 +172,6 @@
 		BA05534420B06668000F8078 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BA05534720B08494000F8078 /* LastSearchHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LastSearchHistory.storyboard; sourceTree = "<group>"; };
 		BA05534A20B085DA000F8078 /* LastSearchHistoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryFactory.swift; sourceTree = "<group>"; };
-		BA05534D20B08A17000F8078 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BA05535020B08D59000F8078 /* RepositoryInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryInfo.storyboard; sourceTree = "<group>"; };
 		BA05535320B08E72000F8078 /* RepositoryInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoFactory.swift; sourceTree = "<group>"; };
 		BA5FCBE920B03579001679A0 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +186,6 @@
 		BA5FCC2C20B03B7B001679A0 /* StoryboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
 		BA5FCC2F20B03CD9001679A0 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		BA5FCC3320B03E3E001679A0 /* CleanLaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanLaunchRouter.swift; sourceTree = "<group>"; };
-		BA5FCC3620B03EC2001679A0 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		BA5FCC3B20B03F29001679A0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BA5FCC3E20B03FF2001679A0 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		BA5FCC4520B04067001679A0 /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
@@ -212,6 +214,12 @@
 		E83A0A9C7856757FFA92818F /* RepositoriesRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesRouterTests.swift; sourceTree = "<group>"; };
 		F40D8A6AEA62886CB11E4C37 /* LastSearchHistoryInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryInteractor.swift; sourceTree = "<group>"; };
 		F8CCE7347795E896EF218C47 /* RepositoriesViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesViewTests.swift; sourceTree = "<group>"; };
+		FA9DD5A622CDF4A800A0A461 /* ModuleInputConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInputConfigurator.swift; sourceTree = "<group>"; };
+		FA9DD5A922CDF55400A0A461 /* RepositoriesModuleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModuleConfig.swift; sourceTree = "<group>"; };
+		FA9DD5AB22CDF5D700A0A461 /* RepositoriesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModule.swift; sourceTree = "<group>"; };
+		FA9DD5AE22CDF68700A0A461 /* RepositoryInfoModuleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoModuleConfig.swift; sourceTree = "<group>"; };
+		FA9DD5B022CDF69800A0A461 /* RepositoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfo.swift; sourceTree = "<group>"; };
+		FA9DD5B322CDFA8400A0A461 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FE2D82EB98C260A33FEF7B0C /* RepositoriesDataDisplayManagerOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesDataDisplayManagerOutput.swift; sourceTree = "<group>"; };
 		FEB6B8042399E6CB763795F8 /* LastSearchHistoryPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryPresenter.swift; sourceTree = "<group>"; };
 		FFEE1A35F1C1AB9F49B536C4 /* LastSearchHistoryRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastSearchHistoryRouterInput.swift; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9DD5B422CDFA8400A0A461 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +445,9 @@
 		87B9DA793FB191E76B9664E5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FA9DD5AB22CDF5D700A0A461 /* RepositoriesModule.swift */,
 				60B9758F3439D2FFB8E605CF /* RepositoriesPresenter.swift */,
+				FA9DD5A822CDF4CD00A0A461 /* ModuleConfig */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -644,14 +655,6 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		BA05534C20B08A06000F8078 /* BaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BA05534D20B08A17000F8078 /* BaseViewController.swift */,
-			);
-			path = BaseViewController;
-			sourceTree = "<group>";
-		};
 		BA05534F20B08D3B000F8078 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +677,7 @@
 				BA5FCBEB20B03579001679A0 /* GitHub */,
 				BA5FCC1A20B03877001679A0 /* Tests */,
 				BA5FCBEA20B03579001679A0 /* Products */,
+				FA9DD5B222CDFA8300A0A461 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -700,8 +704,8 @@
 			isa = PBXGroup;
 			children = (
 				BA5FCC0120B03671001679A0 /* ApplicationLayer */,
-				BA5FCC0920B036DC001679A0 /* BusinessLogicLayer */,
 				BA5FCC0A20B036E5001679A0 /* PresentationLayer */,
+				BA5FCC0920B036DC001679A0 /* BusinessLogicLayer */,
 				BA5FCC0B20B036EB001679A0 /* CoreLayer */,
 				BA5FCC0C20B036F5001679A0 /* Extensions */,
 				BA5FCC4320B0404F001679A0 /* Constants */,
@@ -796,9 +800,8 @@
 		BA5FCC0D20B03705001679A0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BA05534C20B08A06000F8078 /* BaseViewController */,
 				BA5FCC5520B04541001679A0 /* TransitionHandler */,
-				BA5FCC3520B03EAC001679A0 /* BaseTableViewCell */,
+				FA9DD5A522CDF49E00A0A461 /* ModuleInputConfigurator */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -903,14 +906,6 @@
 				BA5FCC3320B03E3E001679A0 /* CleanLaunchRouter.swift */,
 			);
 			path = CleanLaunchRouter;
-			sourceTree = "<group>";
-		};
-		BA5FCC3520B03EAC001679A0 /* BaseTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				BA5FCC3620B03EC2001679A0 /* BaseTableViewCell.swift */,
-			);
-			path = BaseTableViewCell;
 			sourceTree = "<group>";
 		};
 		BA5FCC3820B03F0C001679A0 /* Models */ = {
@@ -1100,7 +1095,9 @@
 		D3BAC80FDF89202844F23F66 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FA9DD5B022CDF69800A0A461 /* RepositoryInfo.swift */,
 				3FFD4E8DCF5FC7D2B5171CF6 /* RepositoryInfoPresenter.swift */,
+				FA9DD5AD22CDF67A00A0A461 /* Config */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1130,9 +1127,9 @@
 		E20AE878CBECA0F50245C61A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA5FCC4A20B04214001679A0 /* RepositoryTableViewCell */,
 				7EAE436A0BD3AD368E8D08A6 /* ViewController */,
 				FA02A8BE579911B7C94D7E41 /* DataDisplayManager */,
+				BA5FCC4A20B04214001679A0 /* RepositoryTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1162,6 +1159,38 @@
 				FE2D82EB98C260A33FEF7B0C /* RepositoriesDataDisplayManagerOutput.swift */,
 			);
 			path = DataDisplayManager;
+			sourceTree = "<group>";
+		};
+		FA9DD5A522CDF49E00A0A461 /* ModuleInputConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				FA9DD5A622CDF4A800A0A461 /* ModuleInputConfigurator.swift */,
+			);
+			path = ModuleInputConfigurator;
+			sourceTree = "<group>";
+		};
+		FA9DD5A822CDF4CD00A0A461 /* ModuleConfig */ = {
+			isa = PBXGroup;
+			children = (
+				FA9DD5A922CDF55400A0A461 /* RepositoriesModuleConfig.swift */,
+			);
+			path = ModuleConfig;
+			sourceTree = "<group>";
+		};
+		FA9DD5AD22CDF67A00A0A461 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FA9DD5AE22CDF68700A0A461 /* RepositoryInfoModuleConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		FA9DD5B222CDFA8300A0A461 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA9DD5B322CDFA8400A0A461 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FDD0E51087F6BD26A45E7FFC /* ViewController */ = {
@@ -1225,10 +1254,12 @@
 				TargetAttributes = {
 					BA5FCBE820B03579001679A0 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					BA5FCC1820B03877001679A0 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BA5FCBE820B03579001679A0;
 					};
@@ -1283,8 +1314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5FCBED20B03579001679A0 /* AppDelegate.swift in Sources */,
+				FA9DD5B122CDF69800A0A461 /* RepositoryInfo.swift in Sources */,
 				E9B67CA4F77F3D5AF905DB76 /* RepositoriesInteractorInput.swift in Sources */,
-				BA5FCC3720B03EC2001679A0 /* BaseTableViewCell.swift in Sources */,
 				BA90810920B1D7F500473C9F /* ProvidersFactory.swift in Sources */,
 				CAD979FD3B057D95241CD865 /* RepositoriesInteractorOutput.swift in Sources */,
 				BA5FCC2620B039E2001679A0 /* RepositoriesFactory.swift in Sources */,
@@ -1313,9 +1344,12 @@
 				BA9080F220B16BCC00473C9F /* String+Formatter.swift in Sources */,
 				BA5FCC5220B044ED001679A0 /* RepositoriesService.swift in Sources */,
 				BA90810020B1876B00473C9F /* AuthorizationServiceImpl.swift in Sources */,
+				FA9DD5AF22CDF68700A0A461 /* RepositoryInfoModuleConfig.swift in Sources */,
 				BA05531F20B056D8000F8078 /* Repository.swift in Sources */,
 				BA05530D20B047B3000F8078 /* NetworkManager.swift in Sources */,
 				BA5FCC4D20B04267001679A0 /* RepositoryTableViewCell.swift in Sources */,
+				FA9DD5AC22CDF5D700A0A461 /* RepositoriesModule.swift in Sources */,
+				FA9DD5A722CDF4A800A0A461 /* ModuleInputConfigurator.swift in Sources */,
 				BA05531820B048A9000F8078 /* RepositoriesProviderImpl.swift in Sources */,
 				BA05534520B06668000F8078 /* CoreDataManager.swift in Sources */,
 				366C1BF7D468501BF5F4DFD1 /* RepositoriesDataDisplayManagerOutput.swift in Sources */,
@@ -1328,8 +1362,8 @@
 				EFA77B3A0CA4DB4852EA8631 /* LastSearchHistoryRouter.swift in Sources */,
 				BA90810620B19BCE00473C9F /* RepositorySearch.swift in Sources */,
 				26E5E45F1D91CF7E6728449A /* LastSearchHistoryViewInput.swift in Sources */,
+				FA9DD5AA22CDF55400A0A461 /* RepositoriesModuleConfig.swift in Sources */,
 				6ED8C574B67D38F5D0422A10 /* LastSearchHistoryViewOutput.swift in Sources */,
-				BA05534E20B08A17000F8078 /* BaseViewController.swift in Sources */,
 				C872C4ADFCFBE7AC7606A7C3 /* LastSearchHistoryViewController.swift in Sources */,
 				849622FA0EBCBA0D2B273920 /* LastSearchHistoryDataDisplayManager.swift in Sources */,
 				6B876075B415D5F0E777E7EF /* LastSearchHistoryDataDisplayManagerImpl.swift in Sources */,
@@ -1447,7 +1481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1501,7 +1535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1514,13 +1548,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7Y4KEU8VJ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1530,13 +1564,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7Y4KEU8VJ;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.github;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1552,7 +1586,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub.app/GitHub";
 			};
@@ -1569,7 +1603,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zarochintsev.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHub.app/GitHub";
 			};

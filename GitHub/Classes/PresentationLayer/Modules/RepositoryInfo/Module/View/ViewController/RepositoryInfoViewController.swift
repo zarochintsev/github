@@ -79,14 +79,10 @@ class RepositoryInfoViewController: UIViewController {
 
 // MARK: - RepositoryInfoViewInput
 extension RepositoryInfoViewController: RepositoryInfoViewInput {
-  func configure(with name: String, stringUrl: String) {
+  func configure(with name: String, url: URL) {
     navigationBar.topItem?.title = name
-    
-    if let url = URL(string: stringUrl) {
-      let urlRequest = URLRequest(url: url)
-      webView.load(urlRequest)
-    }
-    
+    let urlRequest = URLRequest(url: url)
+    webView.load(urlRequest)
   }
 }
 

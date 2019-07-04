@@ -45,7 +45,7 @@ extension LastSearchHistoryDataDisplayManagerImpl: LastSearchHistoryDataDisplayM
       UINib(nibName: RepositoryTableViewCell.className, bundle: nil),
       forCellReuseIdentifier: RepositoryTableViewCell.className)
     
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = C.estimatedRowHeight
     tableView.dataSource = self
     tableView.delegate = self
@@ -110,7 +110,7 @@ extension LastSearchHistoryDataDisplayManagerImpl: UITableViewDelegate {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
       let repository = fetchedResultsController.object(at: indexPath)
       coreDataManager.persistentContainer.viewContext.delete(repository)
@@ -130,9 +130,9 @@ extension LastSearchHistoryDataDisplayManagerImpl: NSFetchedResultsControllerDel
       tableView?.insertSections(IndexSet(integer: sectionIndex), with: .fade)
     case .delete:
       tableView?.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-    case .move:
+    case .move, .update:
       break
-    case .update:
+    @unknown default:
       break
     }
   }
@@ -147,6 +147,8 @@ extension LastSearchHistoryDataDisplayManagerImpl: NSFetchedResultsControllerDel
       tableView?.reloadRows(at: [indexPath!], with: .fade)
     case .move:
       tableView?.moveRow(at: indexPath!, to: newIndexPath!)
+    @unknown default:
+      break
     }
   }
   

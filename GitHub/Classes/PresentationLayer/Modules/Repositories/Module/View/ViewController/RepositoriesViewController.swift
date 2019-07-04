@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepositoriesViewController: BaseViewController {
+class RepositoriesViewController: UIViewController {
   /// Reference to the Presenter's output interface.
   var output: RepositoriesViewOutput!
   var dataDisplayManager: RepositoriesDataDisplayManager!
@@ -38,13 +38,13 @@ class RepositoriesViewController: BaseViewController {
       title: nil,
       style: .plain,
       target: self,
-      action: #selector(signInButtonDidTap))
+      action: #selector(didTapSignInButton))
     navigationItem.leftBarButtonItem = signInButton
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .bookmarks,
       target: self,
-      action: #selector(bookmarksButtonDidTap))
+      action: #selector(didTapBookmarksButton))
   }
   
   func dataDisplayManagerSetup() {
@@ -63,17 +63,17 @@ class RepositoriesViewController: BaseViewController {
   }
   
   // MARK: - Actions
-  @objc func bookmarksButtonDidTap() {
-    output.bookmarksButtonDidTap()
+  @objc func didTapBookmarksButton() {
+    output.didTapBookmarksButton()
   }
   
-  @objc func signInButtonDidTap() {
-    output.signInButtonDidTap()
+  @objc func didTapSignInButton() {
+    output.didTapSignInButton()
   }
   
   // MARK: Actions
   @objc func timerFire() {
-    output.searchBarTextDidChange(searchText: searchController.searchBar.text ?? "")
+    output.didChangeSearchBarText(searchText: searchController.searchBar.text ?? "")
   }
 }
 
@@ -119,7 +119,7 @@ extension RepositoriesViewController: UISearchResultsUpdating {
 // MARK: - UISearchBarDelegate
 extension RepositoriesViewController: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    output.searchBarCancelButtonClicked()
+    output.didTapCancelButtonOnSearchBar()
   }
 }
 

@@ -13,7 +13,7 @@ class AuthorizationServiceImpl {
   
   static let `default` = AuthorizationServiceImpl()
   
-  var redirectUrl: URL? = nil
+  private var redirectUrl: URL?
 }
 
 // MARK: - AuthorizationService

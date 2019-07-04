@@ -16,5 +16,4 @@ struct ProvidersFactory {
     let repositoriesProvider = RepositoriesProviderImpl(networkManager: networkManager)
     return repositoriesProvider
   }
-  
 }

@@ -11,13 +11,13 @@ import UIKit
 struct RepositoryInfoFactory {
   private init() {}
   
-  static func make(name: String, stringUrl: String) -> UIViewController {
-    return makeRepositoryInfoViewController(name: name, stringUrl: stringUrl)
+  static func make(_ configurator: ModuleConfigurator<RepositoryInfo>) -> UIViewController {
+    return makeRepositoryInfoViewController(configurator)
   }
 }
 
 private extension RepositoryInfoFactory {
-  static func makeRepositoryInfoViewController(name: String, stringUrl: String) -> UIViewController {
+  static func makeRepositoryInfoViewController(_ configurator: ModuleConfigurator<RepositoryInfo>) -> UIViewController {
     let viewController = StoryboardFactory
       .make(.repositoryInfo)
       .instantiateViewController(withIdentifier: RepositoryInfoViewController.className) as! RepositoryInfoViewController
@@ -32,14 +32,11 @@ private extension RepositoryInfoFactory {
     presenter.view = viewController
     presenter.interactor = interactor
     
-    presenter.name = name
-    presenter.stringUrl = stringUrl
-    
     interactor.output = presenter
     viewController.output = presenter
     
+    configurator(presenter)
+    
     return viewController
   }
-  
 }
-

@@ -11,10 +11,8 @@ import UIKit
 class RepositoriesDataDisplayManagerImpl: NSObject {
   /// Reference to the Views's output interface.
   weak var output: RepositoriesDataDisplayManagerOutput!
-
-  // MARK: - Other
-  var tableView: UITableView?
   
+  private var tableView: UITableView?
   private var isUpdating = false
   private var repositories = [Repository]()
 }
@@ -29,7 +27,7 @@ extension RepositoriesDataDisplayManagerImpl: RepositoriesDataDisplayManager {
     tableView.keyboardDismissMode = .onDrag
     tableView.dataSource = self
     tableView.delegate = self
-    tableView.tableFooterView = UIView()
+    tableView.tableFooterView = .init()
     
     self.tableView = tableView
   }
@@ -79,8 +77,11 @@ extension RepositoriesDataDisplayManagerImpl: UITableViewDelegate {
 // MARK: - UIScrollViewDelegate
 extension RepositoriesDataDisplayManagerImpl: UIScrollViewDelegate {
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    if isUpdating { return }
-    if scrollView.contentOffset.y + scrollView.frame.size.height > scrollView.contentSize.height - 5 * C.rowHeight {
+    if isUpdating {
+      return
+    }
+    
+    if scrollView.contentOffset.y + scrollView.frame.size.height > scrollView.contentSize.height - 5 * UITableView.automaticDimension {
       output.needLoadNewPieces()
     }
   }
@@ -88,6 +89,5 @@ extension RepositoriesDataDisplayManagerImpl: UIScrollViewDelegate {
 
 // MARK: - Constants
 private enum C {
-  static let rowHeight: CGFloat = UITableViewAutomaticDimension
   static let nameMaxLetters = 30
 }

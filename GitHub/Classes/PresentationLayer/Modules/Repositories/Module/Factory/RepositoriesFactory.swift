@@ -11,13 +11,13 @@ import UIKit
 struct RepositoriesFactory {
   private init() {}
   
-  static func make() -> UIViewController {
-    return makeRepositoriesViewController()
+  static func make(_ configurator: ModuleConfigurator<RepositoriesModule>? = nil) -> UIViewController {
+    return makeRepositoriesViewController(configurator)
   }
 }
 
 private extension RepositoriesFactory {
-  static func makeRepositoriesViewController() -> UIViewController {
+  static func makeRepositoriesViewController(_ configurator: ModuleConfigurator<RepositoriesModule>?) -> UIViewController {
     let viewController = StoryboardFactory
       .make(.repositories)
       .instantiateViewController(withIdentifier: RepositoriesViewController.className) as! RepositoriesViewController
@@ -41,8 +41,8 @@ private extension RepositoriesFactory {
     dataDisplayManager.output = viewController
     
     viewController.dataDisplayManager = dataDisplayManager
+    configurator?(presenter)
     
     return viewController
   }
-  
 }

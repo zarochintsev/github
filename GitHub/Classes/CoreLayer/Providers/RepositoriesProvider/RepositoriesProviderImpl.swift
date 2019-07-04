@@ -9,8 +9,7 @@
 import Foundation
 
 class RepositoriesProviderImpl {
-  let networkManager: NetworkManager
-  
+  private let networkManager: NetworkManager
   init(networkManager: NetworkManager) {
     self.networkManager = networkManager
   }
@@ -29,7 +28,7 @@ extension RepositoriesProviderImpl: RepositoriesProvider {
       C.Keys.SearchRequest.sort : C.starsSort,
       C.Keys.SearchRequest.perPage : C.perPage]
     
-    return networkManager.get(url: url, parameters: parameters, headers: nil) { (data, response, error) in
+    return networkManager.get(url: url, parameters: parameters, headers: nil) { data, response, error in
       completionHandler(data, error)
     }
   }

@@ -9,12 +9,12 @@
 protocol RepositoriesViewOutput: class {
   func viewDidLoad()
   
-  func searchBarTextDidChange(searchText: String)
-  func searchBarCancelButtonClicked()
+  func didChangeSearchBarText(searchText: String)
+  func didTapCancelButtonOnSearchBar()
+  
+  func didTapSignInButton()
+  func didTapBookmarksButton()
   
   func didSelectRepository(_ repository: Repository)
   func needLoadNewPieces()
-  
-  func bookmarksButtonDidTap()
-  func signInButtonDidTap()
 }
